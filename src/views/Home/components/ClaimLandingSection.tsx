@@ -1,9 +1,13 @@
-import PatientSignUpPopup from '@/views/auth/PatientSignUp/Popup';
+// import PatientSignUpPopup from '@/views/auth/PatientSignUp/Popup';
+import Signup from '@/views/auth/SignUp/SignUp';
 import React from 'react';
 import { BiBot, BiGlobe, BiMessageSquare, BiTrendingUp } from 'react-icons/bi';
 import { CgLock } from 'react-icons/cg';
 import { FaUsers } from 'react-icons/fa';
 import { LuBuilding2 } from 'react-icons/lu';
+
+
+
 
 const ClaimLandingSection = () => {
     const features = [
@@ -14,6 +18,7 @@ const ClaimLandingSection = () => {
         { icon: <FaUsers className="w-6 h-6 text-primary" />, title: 'Lead Generation Support', description: 'Convert visitors to clients' },
         { icon: <CgLock className="w-6 h-6 text-primary" />, title: '24/7 Support for patient', description: 'Round-the-clock assistance' }
     ];
+
 
     return (
         <div className="bg-gradient-to-br from-white to-blue-50">
@@ -58,7 +63,8 @@ const ClaimLandingSection = () => {
                             placeholder="GoGetWell.ai/your_name"
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                         />
-                        <PatientSignUpPopup hcfLogin popupButtonStatus buttonChildren={<button className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300">
+                        <Signup hcfLogin popupButtonStatus buttonChildren=
+                        {<button className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300">
                             Join the Waiting List
                         </button>} />
                     </div>

@@ -3,7 +3,9 @@ import aboutUs from '@/assets/images/about_us.gif'
 import mission from '@/assets/images/our_mission.gif'
 import challenges from '@/assets/images/challenges_solve.gif'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface SectionProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     img: any
     icon1: ReactNode
     icon2: ReactNode
@@ -17,85 +19,9 @@ interface SectionProps {
     status: 'left' | 'right'
 }
 
-const Section: React.FC<SectionProps> = ({
-    status,
-    img,
-    icon1,
-    icon2,
-    title,
-    content1,
-    content2,
-    icontitle1,
-    iconp1,
-    icontitle2,
-    iconp2,
-}) => {
-    return (
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
-            {/* Image Section */}
-            <div
-                className={`w-full lg:w-1/2 flex items-center justify-center ${status && 'order-last lg:order-first'}`}
-            >
-                <img
-                    src={img}
-                    alt="About us"
-                    className="w-full object-cover rounded-lg max-w-[400px]"
-                />
-            </div>
-
-            {/* Content Section */}
-            <div
-                className={`w-full lg:w-1/2 ${status && 'order-first lg:order-last'}`}
-            >
-                <div className="mb-6">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                        {title}
-                    </h2>
-                    <div className="h-1 w-20 bg-primary rounded-full"></div>
-                </div>
-
-                <div className="space-y-4">
-                    <p className="text-gray-600 leading-relaxed">{content1}</p>
-
-                    <p className="text-gray-600 leading-relaxed">{content2}</p>
-                </div>
-
-                {/* Feature Points */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                    <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0">
-                            <div className="p-3 bg-blue-100 rounded-lg">
-                                {icon1}
-                            </div>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-gray-800">
-                                {icontitle1}
-                            </h4>
-                            <p className="text-sm text-gray-600">{iconp1}</p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0">
-                            <div className="p-3 bg-blue-100 rounded-lg">
-                                {icon2}
-                            </div>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-gray-800">
-                                {icontitle2}
-                            </h4>
-                            <p className="text-sm text-gray-600">{iconp2}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
 
 const FullPageSections = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const sections = [
         {
             img: aboutUs,
@@ -187,11 +113,11 @@ const FullPageSections = () => {
 
 
     return (
-        <div className="scroll-smooth max-w-[1538px] mx-auto">
+        <div className="scroll-smooth max-w-[1538px] bg-gradient-to-tl from-indigo-100 to-blue-100 mx-auto">
             <div className="w-full max-w-7xl mx-auto px-4 py-20 flex flex-col gap-y-32">
                 <div className="flex flex-col lg:flex-row gap-8 items-center">
                     {/* Image Section */}
-                    <div className="w-full lg:w-1/2 flex items-center justify-center">
+                    <div className="w-full lg:w-1/2 flex items-center justify-between">
                         <img
                             src={aboutUs}
                             alt="About us"
@@ -228,7 +154,7 @@ const FullPageSections = () => {
 
                         {/* Feature Points */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                            <div className="flex items-start gap-3">
+                            <div className="flex items-center gap-3 border border-black rounded-md p-2">
                                 <div className="flex-shrink-0">
                                     <div className="p-3 bg-blue-100 rounded-lg">
                                         <svg
@@ -256,9 +182,9 @@ const FullPageSections = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0">
-                                    <div className="p-3 bg-blue-100 rounded-lg">
+                            <div className="flex items-center gap-3 border border-gray-500 rounded-md p-2">
+                                <div className="flex-shrink-0 ">
+                                    <div className="p-3 bg-blue-100  rounded-lg">
                                         <svg
                                             className="w-6 h-6 text-primary"
                                             fill="none"
@@ -287,9 +213,9 @@ const FullPageSections = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
                     {/* Image Section - Will appear first on mobile */}
-                    <div className="w-full lg:w-1/2 flex items-center justify-center order-first lg:order-last">
+                    <div className="w-full lg:w-1/2 flex items-center md:justify-center order-first lg:order-last">
                         <img
                             src={mission}
                             alt="Our Mission"
@@ -324,8 +250,8 @@ const FullPageSections = () => {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                            <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0">
+                            <div className="flex items-center gap-3 border border-gray-500 rounded-md p-2">
+                                <div className="flex-shrink-0 ">
                                     <div className="p-3 bg-blue-100 rounded-lg">
                                         <svg
                                             className="w-6 h-6 text-primary"
@@ -353,8 +279,8 @@ const FullPageSections = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0">
+                            <div className="flex items-center gap-3 border border-gray-500 rounded-md p-2">
+                                <div className="flex-shrink-0 ">
                                     <div className="p-3 bg-blue-100 rounded-lg">
                                         <svg
                                             className="w-6 h-6 text-primary"
@@ -386,7 +312,7 @@ const FullPageSections = () => {
 
                 <div className="flex flex-col lg:flex-row gap-8 items-center">
                     {/* Image Section - Left Side */}
-                    <div className="w-full lg:w-1/2 flex items-center justify-center">
+                    <div className="w-full lg:w-1/2 flex items-center justify-between">
                         <img
                             src={challenges}
                             alt="Challenges in Medical Tourism"
@@ -422,7 +348,7 @@ const FullPageSections = () => {
 
                         {/* Feature Points */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                            <div className="flex items-start gap-3">
+                            <div className="flex items-center gap-3 border border-gray-500 rounded-md p-2">
                                 <div className="flex-shrink-0">
                                     <div className="p-3 bg-blue-100 rounded-lg">
                                         <svg
@@ -450,7 +376,7 @@ const FullPageSections = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-3">
+                            <div className="flex items-center gap-3 border border-gray-500 rounded-md p-2">
                                 <div className="flex-shrink-0">
                                     <div className="p-3 bg-blue-100 rounded-lg">
                                         <svg
@@ -488,3 +414,13 @@ const FullPageSections = () => {
 }
 
 export default FullPageSections
+
+
+
+
+
+
+
+
+
+

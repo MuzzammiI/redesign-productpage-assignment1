@@ -38,6 +38,8 @@ export type AuthResult = Promise<{
 }>
 
 export type User = {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	role: any
     userId?: string | null
     avatar?: string | null
     userName?: string | null

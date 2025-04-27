@@ -10,6 +10,26 @@ type SignUpProps = {
     signInUrl?: string
 }
 
+interface Signup {
+    hcfLogin?: boolean;
+    popupButtonStatus?: boolean;
+    buttonChildren?: React.ReactNode;
+}
+
+const Signup: React.FC<Signup> = ({ hcfLogin, popupButtonStatus, buttonChildren }) => {
+    return (
+        <div>
+            {/* Example usage of props */}
+            {popupButtonStatus && (
+                <div>
+                    {hcfLogin && <p>HCF Login Enabled</p>}
+                    {buttonChildren}
+                </div>
+            )}
+        </div>
+    );
+};
+
 export const SignUpBase = ({
     signInUrl = '/sign-in',
     disableSubmit,
