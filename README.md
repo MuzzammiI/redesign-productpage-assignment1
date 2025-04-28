@@ -106,3 +106,24 @@ Study these top-performing SaaS landing pages for inspiration:
 Take time to visit these sites and analyze what makes them effective before starting your redesign.
 
 Good luck!
+
+
+
+
+## From my Side Add New Components & Update Existing Components
+
+- We have added a Testimonials section, implemented as the SocialProofSection component, located at src/views/Home/components/SocialProofSection. Additionally, we added a new component, NewFeatures, which can be found at src/views/Home/components/NewFeatures.
+
+- We also updated existing components such as homeNav and heroSection to improve the overall design. Our focus was on creating a more intuitive and user-friendly UI.
+
+- However, I encountered an issue when opening the project. By default, the route redirects to /hello?refURL/hello, which I don't fully understand.
+
+- To view the updated project, please follow these steps:
+
+    - Navigate to localhost:5173/sign-up.
+
+    - Sign up to access and explore all the updated components.
+
+I hope you can review the updates and added components.
+Thank you,
+Md Mozammil
