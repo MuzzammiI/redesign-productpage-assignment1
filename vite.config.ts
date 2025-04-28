@@ -22,7 +22,7 @@ export default defineConfig({
     }
   },
   build: {
-    // outDir: 'build', // default is 'dist'
-    outDir:'dist'
+    outDir: 'build', // default is 'dist'
+    // outDir:'dist'
   }
 })
